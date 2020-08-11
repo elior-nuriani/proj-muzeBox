@@ -1,0 +1,69 @@
+.app-header{
+    height: 8vh;
+    min-height: 60px;
+    width: 100%;
+    margin: 0;
+    font-weight: 800;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    right: 0;
+    padding:40px 50px;
+    transition: all 0.6s linear;
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 0.75em;
+    font-family: mont-med,euro-reg;
+    &.fixed{
+        background-color:black;
+        padding:20px 50px;
+    }
+    .logo{
+        z-index: 9999;
+        cursor: pointer;
+        transition: all 0.3s linear;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50% 50%;
+        height: 45px;
+        width: 45px;
+        background-image: url('https://images.vexels.com/media/users/3/150845/isolated/preview/333bdf231eba2185ef3e211bb541c09f-audio-headphones-icon-by-vexels.png');
+        &:hover{
+            width: 55px;
+            height: 55px;
+        }
+    }
+    .nav > *{
+        padding: 10px 25px;
+        border-radius: 20px;
+        text-align: left;
+    }
+    .nav :last-child{
+        padding-right: 0px;
+    }
+    .nav{
+        .arrow-icon{
+            display: none;
+        }
+    }
+    .loggedInUser-img{
+        height: 35px;
+        width: 35px;
+        border-radius: 200px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50% 50%;
+        border:2px solid $clr-second;
+        margin-left: 25px;
+    }
+    .nav-mobile{
+        .loggedInUser-img{
+            margin: 0px 20px;
+        }
+    }
+}
+
+//App Header Media Design AT _MenuButton cmp !!!
+
+
+
+

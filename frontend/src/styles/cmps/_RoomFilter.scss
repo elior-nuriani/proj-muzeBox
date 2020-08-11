@@ -1,0 +1,16 @@
+.filter-wrapper{
+    width: 500px;
+    .el-input__inner{
+        border-radius: 0px;
+        border: 2px solid $clr-bg-second;
+        background-color: rgba(0, 0, 0, 0);
+    }
+}
+
+
+@media (max-width:630px){
+    .filter-wrapper{
+        width: 95vw;
+        
+    }
+}

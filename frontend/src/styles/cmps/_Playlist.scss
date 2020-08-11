@@ -1,0 +1,58 @@
+.playlist{
+    overflow: scroll;
+    overflow-x: hidden;
+    border-radius: 0px 10px 10px 0px;
+    @include scrollbar;
+    @include videoStyle;
+
+
+    .list-icon{
+      margin-right: 8px;
+    }
+    h2{
+      font-family: mont-reg,lato-reg,sans-serif;
+    }
+
+    .video-box{
+      overflow: hidden;
+      text-overflow: ellipsis;
+      &.video-box-playlist{
+        cursor: grab;
+      }
+      & >.ended-video{
+        opacity: 0.3;
+        
+      }
+      .video-details{
+        max-height: 85%;
+      }
+    }
+}
+
+
+.playlist .sortable-drag{
+  opacity: 0;
+}
+
+.flip-list-move{
+  transition: transform 0.3s;
+}
+
+.ghost{
+  border-left: 3px solid $clr-main;
+  box-shadow: 10px 10px 5px -1 rgba(0, 0, 0, 0.123);
+  opacity: 0.7;
+  transition: all 0.3s;
+  &::before{
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      left: -50px;
+  }
+}
+
+.el-checkbox__inner{
+  background-color: $clr-bg-main !important;
+  border:1px solid $clr-second !important;
+}

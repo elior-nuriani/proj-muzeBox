@@ -1,0 +1,9 @@
+.user-card{
+    width: 25%;
+    height: 200px;
+    background-color: $clr-bg-second;
+    margin-top: 10px;
+    &:not(:last-child){
+        margin-right: 20px;
+    }
+}

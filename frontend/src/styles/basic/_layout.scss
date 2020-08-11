@@ -1,0 +1,15 @@
+.container{
+    max-width: 1000px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.base-padding{
+    padding-top: 9vh;
+}
+
+@media (max-width:630px){
+    .container{
+        padding: 0px;
+    }
+}

@@ -1,0 +1,147 @@
+*{
+    box-sizing: border-box;
+    outline: none;
+}
+
+html{
+    font-family: lato-reg;
+    font-size:16px;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    color: $clr-main;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color:$clr-bg-main;
+}
+.body-screen{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.74);
+    z-index: 10;
+    display: none;
+    &.open{
+        display: block;
+    }
+}
+
+a{
+    text-decoration: none;
+    color: $clr-main;
+    cursor: pointer;
+}
+
+p{
+    margin: 0;
+    padding: 0;
+}
+
+button, .btn{
+    cursor: pointer;
+    font-family: lato-reg;
+
+}
+
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.icon{
+    cursor: pointer;
+}
+
+.input{
+    flex-grow: 1;
+    height: 100%;
+    background-color: rgba(255, 235, 205, 0);
+    border: none;
+    color: $clr-second;
+}
+
+.video-img{
+    height: 100%;
+    min-width: 80px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    border:1px solid $clr-bg-second;
+}
+
+.icon-wrapper{
+    padding: 10px;
+    border-radius: 200px;
+    width: 25px;
+    height: 25px;
+    color: $clr-main;
+    border:1px solid black;
+    font-size: 0.7em;
+    &.info{
+        background-color: $clr-hero;
+    }
+    &.add{
+        background-color:$clr-second;
+        color: black;
+    }
+    &.remove{
+        color: $clr-main;
+        background-color: $clr-bg-main;
+        font-size: 0.85em;
+    }
+}
+
+.create-room-btn, .sync-btn{
+    position: fixed;
+    right: 8%;
+    top: 90%;
+    min-width: 50px;
+    height: 50px;
+    border-radius: 200px;
+    padding: 10px;
+    font-size: 20px;
+    color: $clr-confirm;
+    background-color: $clr-main;
+    z-index: 2000;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.sync-btn{
+    border-radius: 10px;
+    top: 88%;
+    font-size: 14px;
+    transition: all 0.3s linear;
+    border:1px solid $clr-main;
+    span:first-child{
+        margin-right: 10px;
+    }
+    &:hover{
+        transform: scale(1.1);
+    }
+}
+
+@media (max-width:730px){
+    .sync-btn{
+        top: 57%;
+        right: 7%;
+    } 
+}
+
+
+@media (max-width:530px){
+    .sync-btn{
+        display: none;
+    }
+}
+

@@ -1,0 +1,101 @@
+.nav-mobile{
+    display: none;
+    .hamburger-icon {
+        span {
+            height: 4px;
+            width: 30px;
+            background-color:$clr-second;
+            display: block;
+            margin: 4px 0px 4px 0px;
+            transition: 0.7s ease-in-out;
+            transform: none;
+        }
+        &.open{
+            span:nth-of-type(2) {
+                transform: translate(0%, 175%) rotate(-44deg);
+                background-color: $clr-main;
+            }
+            span:nth-of-type(3) {
+                transform: rotate(44deg);
+                background-color: $clr-main;
+
+            }
+            span:first-child,span:last-child{
+                opacity: 0;
+            }
+        }
+    }
+}
+
+//App Header Media Design!
+
+@media (max-width:630px){
+    .app-header{
+        padding-left: 30px;
+        padding-right: 30px;
+        &.set-navbar-pref{
+            position: static;
+            padding: 0px 30px;
+        }
+        &.fixed{
+            background-color:black;
+            padding:20px 30px;
+        }
+        .logo{
+            width: 35px;
+            height: 35px;
+            &:hover{
+                width: 45px;
+                height: 45px;
+            }
+        }
+        .nav-mobile{
+            display: flex;
+
+            .hamburger-icon{
+                z-index: 9999;
+            }
+        }
+        .nav{
+            position: fixed;
+            transform: translateY(-100%);   
+            right: 0;
+            top: 0;
+            height: auto;
+            width: 100vw;
+            background-color:black;
+            color: $clr-main;
+            flex-direction: column;
+            justify-content: start;
+            align-items: flex-start;
+            font-size: 12px;
+            padding-top: 80px;
+            transition: 0.5s ease-in-out;
+            z-index: 9998;
+            &.open{
+                transform: translateY(0%);
+            }
+
+            .arrow-icon{
+                display: block;
+            }
+            & > *{
+                width: 100%;
+                border-radius: 0px;
+                padding:25px 40px; 
+                &:not(:first-child){
+                    border-top: 1px solid $clr-main;
+                }
+                &:nth-child(3){
+                    border-bottom: 3px solid $clr-main;
+                    padding-right: 40px;
+                }
+
+            }
+            .loggedInUser-img{
+                display: none;
+            }  
+        }
+        
+    }
+}

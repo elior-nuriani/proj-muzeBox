@@ -1,0 +1,78 @@
+.form-wrapper{
+    width: 100vw;
+    height: 100vh;
+    padding:0px 100px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: linear-gradient(to left, rgba(0, 204, 255, 0.315),rgba(0, 0, 0, 0.808),rgba(0, 0, 0, 0.808)),url('https://images.pexels.com/photos/1537636/pexels-photo-1537636.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    .form{
+        color: $clr-main;
+        width: 400px;
+        & > *{
+            margin-bottom: 25px;
+            width: 100%;
+        }
+        h2{
+            margin-bottom: 50px;
+            align-self: flex-start;
+            font-family: mont-med;
+            padding: 15px 0px;
+            width: auto;
+            border-bottom:2px solid $clr-main;
+            letter-spacing: 1px;
+        }
+        .input-container{
+            width: 100%;
+            letter-spacing: 2px;
+            @include elInputInner;
+
+            & > *:not(:last-child){
+                margin-bottom: 20px;
+            }
+            .input{
+                flex-grow: 1;
+                
+            }
+            .icon-wrapper-login{
+                width: 40px;
+                height: 100%;
+            }
+        }
+        .btns-box{
+            font-family: sans-src-reg,mont-reg,sans-serif;
+            font-size: 0.8rem;
+            .login-btn{
+                font-family: mont-reg,sans-src-reg,sans-serif;
+                font-weight: bolder;
+
+                padding: 10px 40px;
+                border-radius: 20px;
+                color: $clr-main;
+                background-color: $clr-confirm;
+                border: 1px solid rgba(255, 255, 255, 0);
+            }
+            .register{
+                color: gold;
+                margin-left: 5px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+
+@media (max-width:530px){
+    .form-wrapper{
+        padding:0px 10px;
+        .form{
+            width: 100%;
+            .btns-box{
+                flex-direction: column;
+                .login-btn{
+                    margin-top: 30px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+.about{
+    background-color: $clr-bg-second;
+    height: 100vh;
+    width: 100vw;
+    padding: 0px 8px;
+    h1{
+        color: $clr-second;
+    }
+    .about-content{
+        max-width: 550px;
+        p{  
+            text-align: left;
+            line-height:2.5;
+            font-size: 18px;
+            font-family: mont-reg, Helvetica, sans-serif;
+            font-weight: bold;
+            &:nth-child(3){
+                margin-top: 20px;
+            }
+            span{
+                color: $clr-second;
+            }
+        }
+    }
+}

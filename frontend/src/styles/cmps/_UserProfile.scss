@@ -1,0 +1,208 @@
+.user-profile-container{
+    padding-top: 120px;
+    font-family: lato-reg,src-sans-reg,sans-serif;
+    & > * {
+        border-right: 2px solid $clr-bg-second;
+        border-left: 2px solid $clr-bg-second;
+    }
+    & > :first-child{
+        border-top: 2px solid $clr-bg-second;
+    }
+    & > :last-child{
+        border-bottom: 2px solid $clr-bg-second;
+
+    }
+    .user-info{
+        padding: 50px 30px;
+        .secondry-section{
+            .user-img{
+                margin-right: 80px;
+                width:220px;
+                height: 220px;
+                border:1px solid $clr-second;
+                border-radius: 200px;
+                background-position: 50% 50%;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        }
+        .primary-section{
+            .name{
+                font-weight: bolder;
+                font-size: 2rem;
+                letter-spacing: 1px;
+            }
+            .address{
+                font-size: 0.9rem;
+            }
+            .rating{
+                margin-left: 30px;
+                font-size: 0.75rem;
+                letter-spacing: 5px;
+            }
+            p{
+                margin-top: 30px;
+                font-family: vibes;
+                font-weight: 400;
+                letter-spacing: 1px;
+                font-size: 1.6rem;
+                color: $clr-second;
+            }
+        }
+    }
+    .user-room-list{
+        .room-list-header{
+            padding: 5px 10px 0px 10px;
+            .title{
+                font-size: 0.9rem;
+                text-align: left;
+            }
+            .social-box{
+                span{
+                    font-size: 20px;
+                    cursor: pointer;
+                }
+                span:not(:last-child){
+                    margin-right: 20px;
+                }
+                .face{
+                    color: $clr-face;
+                }
+                .insta{
+                    padding: 0px 2px;
+                    border-radius: 5px;
+                    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+                }
+            }
+        }
+        .user-room-preview{
+            width: 100%;
+            height: 80px;
+            &:not(:last-child){
+                border-bottom: 2px solid black;
+            }
+            font-size:12px;
+            background-color:$clr-bg-second;
+            overflow: hidden;
+            
+            & > *{
+                margin-right:15px;
+            }
+            & >:first-child{
+                margin-left:15px ;
+            }
+            .room-idx{
+                background-color: $clr-bg-main;
+                width: 50px;
+                height: 50px;
+            }
+            .room-video-img{
+                background-repeat: no-repeat;
+                background-size:cover;
+                background-position: 50% 50%;
+                height: 60px;
+                width: 75px;
+            }
+            .room-name{
+                width:20%;
+                padding: 5px 0px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            .room-desc{
+                width: 45%;
+                padding: 5px 0px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            .room-rating, .room-views{
+                margin-right: 20px;
+                width: 50px;
+                height: 50px;
+                .content{
+                    margin-right: 10px;
+                }
+                .views{
+                    color: gold;
+                }
+            }
+        }
+        .user-room-preview-alt{
+            padding: 30px 0px;
+            font-size: 1.5rem;
+            font-family: mont-med, Helvetica, sans-serif;
+            border-top: 1px solid $clr-bg-second;
+        }
+    }
+}
+
+@media (max-width:630px){
+    .user-profile-container{
+
+        & > *, & >:first-child, & >:last-child {
+            border: none;
+        }
+        .user-info{
+            padding: 30px 10px;
+            flex-direction: column;
+            .secondry-section{
+                .user-img{
+                    width: 150px;
+                    height: 150px;
+                    margin:0px 0px 30px 0px;
+                }
+            }
+            .primary-section{
+                .name{
+                    font-size: 1.5rem;
+                    justify-content: space-between;
+                }
+                .address{
+                    font-size: 0.8rem;
+                }
+                p{
+                    font-size: 1.3rem;
+                    text-align: center;
+                }
+            }
+        } 
+        .user-room-list{      
+            .room-list-header{
+                .social-box{
+                    span{
+                        font-size: 15px;
+                    }
+                }
+            }
+            .user-room-preview{
+                justify-content: space-between;
+                width: 100vw;
+                .room-rating, .room-views{
+                    margin: 0px;
+                }
+                & > *{
+                    margin: 0px;
+                }
+                & > :first-child{
+                    margin-left: 8px;
+                }
+                & > :last-child{
+                    margin-right: 8px;
+                }
+                .room-idx{
+                    width: 25px;
+                    height: 25px;
+                }
+                .room-video-img{
+                    height: 65px;
+                    width: 65px;
+                }
+                .room-desc{
+                    display: none;
+                }
+            }
+        }
+    }
+}

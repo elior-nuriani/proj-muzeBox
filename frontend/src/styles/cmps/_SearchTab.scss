@@ -1,0 +1,47 @@
+//Playlist.scss Also Define styles for that section....
+
+.search-container{
+    display: none;
+    grid-area: 6/1/6/7;
+    overflow: scroll;
+    overflow-x: hidden;
+    
+    @include scrollbar;
+
+    &.open-search-tab{
+        transition: all 0.6s linear;
+        grid-area: 6/1/11/7;
+        background-color: $clr-bg-second;
+        display: inline-block;
+    }
+    .header-container{
+        .icon-search{
+            margin-right: 20px;
+            color: $clr-second;
+        }
+
+    }
+    .search-options-container{
+        height: 100%;
+        @include videoStyle;
+        
+        .video-box{
+            padding-left: 0px;
+            padding-right: 20px;
+            .video-details{
+                width: 50%;
+            }
+            .icons-container{
+                flex-grow: 1;
+                & >:not(:last-child){
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+    .search-msg{
+        margin-top: 70px;
+
+    }
+
+}

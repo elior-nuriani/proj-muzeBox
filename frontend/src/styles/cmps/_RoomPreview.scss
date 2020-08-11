@@ -1,0 +1,174 @@
+//Room-list-container From RoomsList Cmp
+.rooms-list-container{
+    padding-left: 80px;
+    padding-right: 80px;
+    .rooms-container{     
+        column-count: 3;
+        column-gap: 18px;
+        color: $clr-main;
+        .room-preview{
+        break-inside: avoid;
+        overflow: hidden;
+        margin-bottom: 18px;    
+        background-color: $clr-bg-second;
+        padding: 8px 13px;
+        font-family: sans-src-reg,lato-reg,sans-serif;
+        border-radius: 10px;
+        cursor: pointer;
+            & > * {
+                width: 100%;
+            }
+            .room-creators, .room-info{
+                margin: 5px;
+            }
+            .room-creators{
+                font-size: 0.7rem;
+                & > span{
+                    margin-right: 10px;
+                }
+                .admin-img{
+                    width: 25px;
+                    height: 25px;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: 50% 50%;
+                    border-radius: 30px;
+                    border:1px solid $clr-second;
+                    margin-right: 5px;
+                }
+            }   
+            .room-img{
+                height: auto;
+                background-position: 50% 50%;
+                background-repeat: no-repeat;
+                background-size: cover;
+                border-radius: 10px;
+                .img-icon-wrapper{
+                    width: 100%;
+                    height: 100%;
+                    .img-icon{
+                        color: $clr-confirm;
+                        font-size: 25px;
+                        margin: 15px;
+                        &.live-title{
+                            color:red;
+                            font-size: 13px;
+                            text-align: center;
+                            animation: live 3s linear infinite;
+                        }
+                    }
+                }
+            }
+            .room-content{
+                h2.room-title{
+                    font-size: 1.1rem;
+                    margin-bottom: 5px;
+                    font-weight: 500;
+                    .list-icon{
+                        font-size: 0.9rem;
+                        margin-left: 20px;
+                        margin-left: 20px;
+                    }
+                }
+                p.room-desc{
+                    font-size: 0.75rem;
+                }
+            } 
+            .room-tags-container{
+                font-size: 0.8rem;
+                margin: 15px 0px;
+                font-weight: bolder;
+                letter-spacing: 2px;
+                .tag{
+                    padding: 5px 8px;
+                    margin-right: 5px;
+                    border-radius: 10px;
+                    background-color: $clr-confirm;
+
+                }
+            }
+            .room-info{
+                padding: 20px 0px 0px 0px;
+                border-top: 1px solid $clr-bg-main;
+                font-size: 0.8rem;
+                .memebers-container{
+                    .room-memeber{
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        background-position: 50% 50%;
+                        width: 25px;
+                        height: 25px;
+                        border-radius: 20px;
+                        &:not(:first-child){
+                            margin-left: -5px;
+                        }
+                        &.room-count{
+                            @include memebersCount
+                        }
+                    }
+                }
+                .stats{
+                    & > * {
+                        &:not(:last-child){
+                            margin-right: 8px;
+                        }
+                        & .stats-icon{
+                            margin: 0px 5px;
+                            font-size: 0.7rem;
+                            &.views{
+                                color: gold;
+                            }
+                            &.rating{
+                                color: $clr-main;
+                                margin-bottom: 1px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width:1000px){
+    .rooms-list-container{
+        .rooms-container{
+            column-count: 2;
+        }
+    }
+}
+
+@media (max-width:695px){
+    .rooms-list-container{
+        .rooms-container{
+            column-count: 1;
+        }
+    }
+}
+
+@media (max-width:630px){
+    .rooms-list-container{
+        padding-left: 0px;
+        padding-right: 0px;
+        .rooms-container{
+            .room-preview{      
+                padding: 8px 0px;
+                .room-creators, .room-content , .room-tags-container, .room-info{
+                    padding-left: 10px;
+                    padding-right: 10px;
+                }
+                .room-content{
+                        p.room-desc{
+                            font-size: 13px
+                        }
+                } 
+
+                .room-img{
+                    border-radius: 0px;
+                }
+            }
+        }
+    }
+}
+

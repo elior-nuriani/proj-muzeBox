@@ -1,0 +1,123 @@
+.trend-user-preview{
+    width: 100%;
+    max-width: 800px;
+    min-height: 60px;
+    margin-bottom: 10px;
+    position: relative;
+    overflow: hidden;
+    padding: 2px 0px;
+    .trend-user-img{
+        width:83px;
+        height: 83px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50% 50%;
+        border-radius: 200px;
+        position: relative;
+        left: 20px;
+        border:1px solid $clr-second;
+    }
+    .trend-user-details{
+        flex-grow: 1;
+        padding: 10px 15px 10px 30px;
+        background-color: $clr-bg-second;
+        // border-radius: 200px 0px 0px 200px;
+        .trend-user-info{
+            font-size: 12px;
+            .personal-info{
+                margin-right: 25px;
+                text-align: left;   
+                width: 150px;
+                overflow: hidden;
+                p:first-child{
+                    font-weight: bold;
+                    font-size: 14px;
+                    letter-spacing: 1px;
+                }
+                p.rating-wrapper-mobile{
+                    display: none;
+                }
+            }
+            .rating-wrapper, .rating-wrapper-mobile{
+                span{
+                    margin-right: 5px;
+                    font-size: 14px;
+                }
+            }
+            .rating-wrapper{
+                color: $clr-second;
+                .rating-star{
+                    margin-right: 5px;
+                }
+            }
+        }
+        .user-rooms-list{
+            .user-room{
+                width: 40px;
+                height: 40px;
+                border-radius: 10px;
+                box-shadow: 0 14px 28px rgba(0, 0, 0, 0.466), 0 10px 10px rgba(0, 0, 0, 0.432);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: 50% 50%;
+                margin-right: 10px;
+                .explore-btn{
+                    font-size: 0.85rem;
+                    justify-self: end;
+                    width: 20px;
+                }
+            }
+            .user-room-alt{
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+@media (max-width:590px){
+    .trend-user-preview{
+        background-color: $clr-bg-second;
+        margin-bottom: 10px;
+        .trend-user-img{
+            width:50px;
+            height: 50px;
+            border-radius: 0px;
+            position: static;
+            left: 0px;
+            border:none;
+        }
+        .trend-user-details{
+            padding: 5px 5px 5px 5px;
+            .trend-user-info{
+                .personal-info{
+                    margin-right: 25px;
+                    width: 120px;
+                    overflow: hidden;
+                    p{
+                        margin-top: 0px;
+                        margin-bottom:3px;
+                        &.rating-wrapper-mobile{
+                            display: block;
+                            .rating-star{
+                                margin-right: 5px;
+                            }
+                        }
+                    }
+                    p:first-child{
+                        font-size: 12px;
+                    }
+                    
+                }
+                .rating-wrapper{
+                    display: none;
+                }
+            }
+            .user-rooms-list{
+                .user-room{
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+        }
+    }
+}

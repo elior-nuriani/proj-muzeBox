@@ -1,0 +1,141 @@
+.output{
+    position: relative;
+    width: 100%;
+    height: 93%;
+    padding: 20px;
+    border:1px solid $clr-bg-second;
+    overflow: scroll;
+    overflow-x: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 70% 10%;
+    background-image:linear-gradient(rgba(194, 145, 253, 0.185),rgba(0, 0, 0, 0.521)), url("https://images.pexels.com/photos/998641/pexels-photo-998641.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    @include scrollbar;
+    .chat-note, .chat-msg{
+        color: $clr-main;
+        font-size: 0.65em;
+        letter-spacing: 1px;
+        margin: 10px 0px;
+
+    }
+    .chat-note{
+        span{
+            font-weight: bolder;
+        }
+    }
+    .chat-msg{
+        & .chat-msg-details > *{
+            margin-right: 5px;
+        }
+
+        .profile-img.msg-img{
+            width: 25px;
+            height: 25px;
+        }
+        .msg-name{
+            color: $clr-second;
+        }
+ 
+    }
+    .msg-wrapper{
+        .msg-txt{
+            position: relative;
+            padding: 7px 10px;
+            background-color: $clr-second;
+            text-align: left;
+            min-width: 50px;
+            color: black;
+            font-weight: bold;
+            border-radius: 10px;
+            margin-left: 30px;
+            &::after{
+                content: '';
+                position: absolute;
+                width: 0;
+                height: 0;
+                border-top: 16px solid $clr-second;
+                border-left: 8px solid transparent;
+                border-right:5px solid transparent;
+                top: 0;
+                left: -4px;
+            }
+        }
+    }
+    .float-icon-wrapper{
+        position: absolute;
+        top: 90%;
+        right: 20px;
+        width: 28px;
+        height: 28px;
+        background-color:$clr-main;
+        border-radius: 200px;
+        border:1px solid $clr-second;
+        z-index: 100;
+        font-size: 0.8em;
+        &.floating-sample-1{
+            animation: floating1 13s linear;
+        }
+        &.floating-sample-2{
+            animation: floating2 14s linear;
+        }
+        &.floating-sample-3{
+            animation: floating3 12s linear;
+        }
+    }
+}
+.chat-form{
+    height: 7%;
+    width: 100%;
+    position: relative;
+    background-color: $clr-bg-main;
+    border: 1px solid $clr-bg-second;
+    input{
+        flex-grow: 1;
+        @include padding-left-base;
+    }
+    button{
+        width:100px ;
+        background-color: $clr-second;
+        color: black;
+        border: none;
+        font-family: lato-bold,lato-reg,sans-serif;
+    }
+    .icons-btn{
+        height: 100%;
+        padding-right: 2px;
+        .icons{
+            font-size: 1.5em;
+            padding-right: 3px;
+        }
+    }
+    .icons-container{
+        position: absolute;
+        top: 0%;
+        right: 0%;
+        height: 100%;
+        width: 0%;
+        visibility: hidden;
+        opacity: 0;
+        background-color: $clr-bg-second;
+        z-index: -100;
+        transition: width 0.4s ease-out ;
+        border-top: 1px solid $clr-bg-main;
+        &.open{
+            visibility: visible;
+            opacity: 1;
+            width: 100%;
+            z-index: 100;
+
+        }
+        .icons-box{
+            overflow: hidden;
+            .icon-image{
+                margin-right: 20px;
+            }
+        }
+        .icons-btn-back{
+            font-size: 0.7em;
+        }
+    }
+}
+

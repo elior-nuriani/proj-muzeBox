@@ -1,0 +1,99 @@
+.create-room-container{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 50vw;
+    height: auto;
+    min-height: 60vh;
+    background-color:$clr-bg-second;
+    font-family: mont-reg, Helvetica, sans-serif;
+    font-size: 12px;
+    z-index: 1001;
+    padding: 30px 20px;
+    transition: all 0.4s ease-in-out;
+    &.create-room-resp{
+        display: flex;
+    }
+    &.create-room-mobile{
+        display: none;
+    }
+
+    h2.title{
+        margin: 0px;
+        font-family: mont-reg, Helvetica, sans-serif;
+        font-size: 16px;
+    }
+    .form{
+        color: $clr-second;
+        label{
+            display: inline-block;
+            margin: 8px;
+        }
+        label:first-child{
+            margin-top: 20px;
+        }
+        .el-input{
+            margin-bottom: 20px;
+            color: $clr-main;
+            .el-input__inner{
+                background-color: rgba(255, 255, 255, 0);
+                color: $clr-main;
+                border: none;
+                padding-bottom: 10px;
+                border-bottom: 2px solid $clr-bg-main;
+            }
+            .el-input__count .el-input__count-inner{
+                background-color: rgba(255, 255, 255, 0);
+            }
+        }
+        .el-select{
+            overflow: hidden;
+            display: block !important;
+            .el-input__inner{
+                border-bottom: none;
+            }
+            border-bottom: 2px solid $clr-bg-main;
+        }
+        .el-switch__core{
+            margin: auto 8px;
+        }
+    }
+    .publish-btn{
+        @include ButtonDefault;
+        margin-top: 15px;
+    }
+}
+
+
+@media (max-width:750px){
+    .create-room-container{
+        width: 70vw;
+    }
+}
+
+@media (max-width:630px){
+    .create-room-container{
+        padding-top:90px;
+        left: 0px;
+        top: 0px;
+        transform: translate(0%, 0%);
+        height: 100vh;
+        justify-items: center;
+        align-items: center;
+        width: 85vw;
+        transform: translateX(-100%);
+        &.create-room-resp{
+            display: none;
+        }
+        &.create-room-mobile{
+            display: flex;
+        }
+        &.open{
+            transform: translateX(0%);
+        }
+        .input.el-input{
+            height: auto;
+        }
+    }
+}
