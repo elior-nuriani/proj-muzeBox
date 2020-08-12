@@ -7,3 +7,5 @@ You Can join or Create 2 types of rooms:
 
 # Live page: https://muzebox.herokuapp.com/#/
 Demo user : johndoe@gmail.com , pass : johndoe123
+
+Created with Vue.Js & Vuex,sockets, REST API with Node.Js (Express) and MongoDB / Atlas.
